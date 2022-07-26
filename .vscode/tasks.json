@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "process",
+            "label": "C/C++ MSVC: Build Project(Debug-x64)",
+            "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
+            "args": [
+                "${workspaceFolder}/Untilted-Pokemon-Game.sln",
+                "/p:Configuration=Debug;Platform=x64",
+                "/fl",
+                "/flp:LogFile=${workspaceFolder}/logs/msbuild.log"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "process",
+            "label": "C/C++ MSVC: Build Project(Release-x64)",
+            "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
+            "args": [
+                "${workspaceFolder}/Untilted-Pokemon-Game.sln",
+                "/p:Configuration=Release;Platform=x64",
+                "/fl",
+                "/flp:LogFile=${workspaceFolder}/logs/msbuild.log"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "Run Release: Untilted-Pokemon-Game",
+            "command": "${workspaceFolder}/bin/Pale-Engine_x86_64/Release/Pale-Engine.exe",
+            "args": [],
+            "dependsOn": ["C/C++ MSVC: Build Project(Release-x64)"],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
