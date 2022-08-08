@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "configurations": [        
+        //--- Debuging configuration for Windows usage ---//
+        {
+            "name": "Debug Application: Pale-Engine (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Pale-Engine_x86_64/Debug/Pale-Engine.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "preLaunchTask": "C/C++ MSVC: Build Project(Debug-x64-Windows)"
+        },
+        //--- Debuging configuration for Unix usage ---//
+        {
+            "name": "Debug Application: Pale-Engine (Unix)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Pale-Engine_x86_64/Debug/Pale-Engine",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "preLaunchTask": "C/C++ MAKE: Build Project(Debug-x64-Unix)"
+        }
+    ]
+}

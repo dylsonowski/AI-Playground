@@ -1,9 +1,10 @@
 {
     "version": "2.0.0",
     "tasks": [
+        //--- Tasks configurations for Windows usage ---//
         {
             "type": "process",
-            "label": "C/C++ MSVC: Build Project(Debug-x64)",
+            "label": "C/C++ MSVC: Build Project(Debug-x64-Windows)",
             "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
             "args": [
                 "${workspaceFolder}/Untilted-Pokemon-Game.sln",
@@ -19,7 +20,7 @@
         },
         {
             "type": "process",
-            "label": "C/C++ MSVC: Build Project(Release-x64)",
+            "label": "C/C++ MSVC: Build Project(Release-x64-Windows)",
             "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
             "args": [
                 "${workspaceFolder}/Untilted-Pokemon-Game.sln",
@@ -32,10 +33,47 @@
         },
         {
             "type": "shell",
-            "label": "Run Release: Untilted-Pokemon-Game",
+            "label": "Run Release: Untilted-Pokemon-Game (Windows)",
             "command": "${workspaceFolder}/bin/Pale-Engine_x86_64/Release/Pale-Engine.exe",
             "args": [],
-            "dependsOn": ["C/C++ MSVC: Build Project(Release-x64)"],
+            "dependsOn": ["C/C++ MSVC: Build Project(Release-x64-Windows)"],
+            "problemMatcher": "$msCompile"
+        },
+        //--- Tasks configurations for Unix usage ---//
+        {
+            "type": "shell",
+            "label": "C/C++ MAKE: Build Project(Debug-x64-Unix)",
+            "command": "make",
+            "args": [
+                "--directory=${workspaceFolder}/bin",
+                "config=debug"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal":"always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++ MAKE: Build Project(Release-x64-Unix)",
+            "command": "make",
+            "args": [
+                "--directory=${workspaceFolder}/bin",
+                "config=release"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal":"always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "shell",
+            "label": "Run Release: Untilted-Pokemon-Game (Unix)",
+            "command": "${workspaceFolder}/bin/Pale-Engine_x86_64/Release/Pale-Engine",
+            "args": [],
+            "dependsOn": ["C/C++ MAKE: Build Project(Release-x64-Unix)"],
             "problemMatcher": "$msCompile"
         }
     ]
