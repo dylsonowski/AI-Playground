@@ -47,7 +47,7 @@ newaction {
         os.remove("../**.vcxproj")
         os.remove("../**.vcxproj.filters")
         os.remove("../**.vcxproj.user")
-        os.remove("../Makefile")
+        os.remove("../**Makefile")
         os.remove("../**.make")
         print("Done!")
     end
