@@ -25,7 +25,7 @@ if [ "$1" = "linux" ]; then
     ../vendor/Premake/premake5-linux $2
     exit
 elif [ "$1" = "mac" ]; then
-    ../vendor/Premake/premake5-macos $2
+    ../vendor/Premake/premake5-macosx $2
     exit
 else
     echo Action did not recognized. This script allows building only Linux or MacOS projects.
