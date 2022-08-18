@@ -3,10 +3,10 @@
     "configurations": [        
         //--- Debuging configuration for Windows usage ---//
         {
-            "name": "Debug Application: Pale-Engine(Windows)",
+            "name": "Debug Application: Untitled-Pokemon-Game(Windows)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Pale-Engine_x86_64/Debug/Pale-Engine.exe",
+            "program": "${workspaceFolder}/bin/Untitled-Pokemon-Game_x86_64/Debug/Untitled-Pokemon-Game.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -15,10 +15,10 @@
         },
         //--- Debuging configuration for Unix/MacOS usage ---//
         {
-            "name": "Debug Application: Pale-Engine(Unix/MacOS)",
+            "name": "Debug Application: Untitled-Pokemon-Game(Unix/MacOS)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Pale-Engine_x86_64/Debug/Pale-Engine",
+            "program": "${workspaceFolder}/bin/Untitled-Pokemon-Game_x86_64/Debug/Untitled-Pokemon-Game",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

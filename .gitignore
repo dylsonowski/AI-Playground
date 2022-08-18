@@ -7,4 +7,7 @@ logs/
 #Files
 *.user
 *.log
+*.sln
+*.vcxproj
+*.filters
 Makefile

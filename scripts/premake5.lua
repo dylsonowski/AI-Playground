@@ -5,7 +5,7 @@ workspace("Untilted-Pokemon-Game") -- Title of the whole project is temporary. I
     configurations({ "Debug", "Release" })
 
     filter({ "system:windows", "action:vs*" })
-        startproject("Pale-Engine") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
+        startproject("Untilted-Pokemon-Game") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
         location(rootDir)
         flags({ "MultiProcessorCompile", "NoMinimalRebuild" })
 
@@ -32,6 +32,7 @@ workspace("Untilted-Pokemon-Game") -- Title of the whole project is temporary. I
         optimize("on")
 
 include(rootDir .. "Pale-Engine")
+include(rootDir .. "Untitled-Pokemon-Game")
 
 newaction {
     trigger = "clean",

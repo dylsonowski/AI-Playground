@@ -34,7 +34,7 @@
         {
             "type": "shell",
             "label": "Run Release: Untilted-Pokemon-Game(Windows)",
-            "command": "${workspaceFolder}/bin/Pale-Engine_x86_64/Release/Pale-Engine.exe",
+            "command": "${workspaceFolder}/bin/Untitled-Pokemon-Game_x86_64/Release/Untitled-Pokemon-Game.exe",
             "args": [],
             "dependsOn": ["C/C++ MSVC: Build Project(Release-x64-Windows)"],
             "problemMatcher": "$msCompile"
@@ -71,7 +71,7 @@
         {
             "type": "shell",
             "label": "Run Release: Untilted-Pokemon-Game(Unix/MacOS)",
-            "command": "${workspaceFolder}/bin/Pale-Engine_x86_64/Release/Pale-Engine",
+            "command": "${workspaceFolder}/bin/Untitled-Pokemon-Game_x86_64/Release/Untitled-Pokemon-Game",
             "args": [],
             "dependsOn": ["C/C++ MAKE: Build Project(Release-x64-Unix/MacOS)"],
             "problemMatcher": "$msCompile"

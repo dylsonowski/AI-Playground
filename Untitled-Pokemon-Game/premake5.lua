@@ -1,8 +1,8 @@
 local rootDir = "../"
 
-project("Pale-Engine")
-    location(rootDir .. "Pale-Engine")
-    kind("StaticLib")
+project("Untitled-Pokemon-Game")
+    location(rootDir .. "Untitled-Pokemon-Game")
+    kind("ConsoleApp")
     language("C++")
     cppdialect("C++20")
     staticruntime("on")
@@ -11,17 +11,16 @@ project("Pale-Engine")
     targetdir(rootDir .. "bin/%{prj.name}_%{cfg.architecture}/%{cfg.buildcfg}")
     objdir(rootDir .. "bin-int/%{prj.name}_%{cfg.architecture}/%{cfg.buildcfg}")
 
-    pchheader("palepch.h")
-    pchsource(rootDir .. "%{prj.name}/src/palepch.cpp")
-
     files({
         rootDir .. "%{prj.name}/src/**.h",
         rootDir .. "%{prj.name}/src/**.cpp"
     })
 
     includedirs({
-        "%{prj.name}/src"
+        rootDir .. "Pale-Engine/src"
     })
+
+    links({"Pale-Engine"})
 
     filter("files:**.tpp")
         flags({ "ExcludeFromBuild" })
