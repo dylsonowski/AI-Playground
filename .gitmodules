@@ -1,0 +1,3 @@
+[submodule "Pale-Engine/vendor/Spdlog"]
+	path = Pale-Engine/vendor/Spdlog
+	url = https://github.com/gabime/spdlog.git

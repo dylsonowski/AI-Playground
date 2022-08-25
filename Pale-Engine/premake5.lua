@@ -20,7 +20,8 @@ project("Pale-Engine")
     })
 
     includedirs({
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/Spdlog"
     })
 
     filter("files:**.tpp")
