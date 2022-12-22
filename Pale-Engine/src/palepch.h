@@ -5,6 +5,7 @@
 #include <memory>
 #include <chrono>
 #include <format>
+#include <utils.h>
 
 //--- Data structures includes ---//
 #include <vector>

@@ -1,5 +1,6 @@
 // https://spdlog.docsforge.com/
 #pragma once
+#include "config/log-manager.config.h"
 
 namespace Pale::Core {
 class Log_Manager {

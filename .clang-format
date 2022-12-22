@@ -25,7 +25,7 @@ AlignEscapedNewlines: Left
 AlignOperands: DontAlign
 AlignTrailingComments: true
 
-AllowAllArgumentsOnNextLine: true
+AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortEnumsOnASingleLine: false
 AllowShortBlocksOnASingleLine: Always
@@ -43,8 +43,8 @@ AlwaysBreakTemplateDeclarations: MultiLine
 # AttributeMacros:  # Defines list of attribute macros
 #   - __capability
 
-BinPackArguments: true
-BinPackParameters: true
+BinPackArguments: false
+BinPackParameters: false
 BitFieldColonSpacing: Both
 
 BreakBeforeBraces: Custom
@@ -68,7 +68,7 @@ BraceWrapping:
   SplitEmptyRecord: false
   SplitEmptyNamespace: false
 
-BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBinaryOperators: None
 BreakBeforeConceptDeclarations: false
 BreakBeforeInheritanceComma: false
 BreakInheritanceList: BeforeColon
@@ -78,7 +78,7 @@ BreakConstructorInitializers: BeforeColon
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: true
 
-ColumnLimit: 79
+ColumnLimit: 130
 # CommentPragmas:  '^ IWYU pragma:' # A regular expression that describes comments with special meaning, which should not be split into lines or otherwise changed.
 QualifierAlignment: Custom
 QualifierOrder: ['constexpr', 'inline', 'static', 'const', 'type', 'volatile', 'restrict']
