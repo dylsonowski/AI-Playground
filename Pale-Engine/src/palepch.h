@@ -6,6 +6,7 @@
 #include <chrono>
 #include <format>
 #include <utils.h>
+#include <typeinfo>
 
 //--- Data structures includes ---//
 #include <vector>
