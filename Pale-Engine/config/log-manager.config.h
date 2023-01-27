@@ -30,13 +30,10 @@ struct LogManagerConfig {
 		_loggers.emplace_back(LoggerConfig("APP", "%^[%c][%n][%l] %v%$: %@ -> %!", spdlog::level::warn));
 
 		// Logger sinks config
-		std::string logFileName =
-			"logs/AppRuntime(" + std::format("{:%d-%m-%Y %H:%M:%OS}", std::chrono::system_clock::now()) + ").log";
-		_sinks.emplace_back(std::make_pair(std::make_shared<spdlog::sinks::basic_file_sink_mt>(logFileName, true),
-										   spdlog::level::trace));
+		std::string logFileName = "logs/AppRuntime(" + std::format("{:%d-%m-%Y %H:%M:%OS}", std::chrono::system_clock::now()) + ").log";
+		_sinks.emplace_back(std::make_pair(std::make_shared<spdlog::sinks::basic_file_sink_mt>(logFileName, true), spdlog::level::trace));
 
-		_sinks.emplace_back(
-			std::make_pair(std::make_shared<spdlog::sinks::stdout_color_sink_mt>(), spdlog::level::warn));
+		_sinks.emplace_back(std::make_pair(std::make_shared<spdlog::sinks::stdout_color_sink_mt>(), spdlog::level::warn));
 	}
 
 	~LogManagerConfig() = default;

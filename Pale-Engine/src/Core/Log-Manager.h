@@ -1,6 +1,6 @@
 // https://spdlog.docsforge.com/
 #pragma once
-#include "spdlog/spdlog.h"
+#include "config/log-manager.config.h"
 
 namespace Pale::Core {
 class Log_Manager {
@@ -10,5 +10,8 @@ public:
 
   void Initialize();
   void Shutdown() { spdlog::shutdown(); }
+
+private:
+  void ValidateConfig(LogManagerConfig config);
 };
 } // namespace Pale::Core

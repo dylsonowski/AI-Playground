@@ -83,7 +83,7 @@ BreakConstructorInitializers: BeforeColon
 # BreakAfterJavaFieldAnnotations: false # Not using
 BreakStringLiterals: true # TESTME
 
-ColumnLimit: 120 # TESTME
+ColumnLimit: 0 # TESTME
 # CommentPragmas:  '^ IWYU pragma:' # A regular expression that describes comments with special meaning, which should not be split into lines or otherwise changed.
 
 QualifierAlignment: Custom
