@@ -1,6 +1,6 @@
 // https://github.com/gabime/spdlog/wiki
 #pragma once
-#include <spdlog/spdlog.h>
+#include <spdlog.h>
 
 namespace Pale::Core {
 class Log_Manager {
@@ -14,15 +14,15 @@ public:
 private:
   // Methods
   // Use ONLY in 'Initialize()' method!
-  bool AddSink(const char* sinkName, spdlog::sink_ptr sink, spdlog::level::level_enum level, const char* format);
-  bool RemoveSink(const char* sinkName);
+  bool AddSink(std::string sinkName, spdlog::sink_ptr sink, spdlog::level::level_enum level, std::string format);
+  bool RemoveSink(std::string sinkName);
 
   bool AddLogger();
-  bool RemoveLogger(const char* loggerName);
+  bool RemoveLogger(std::string loggerName);
   
 
   // Attributes
-  static std::map<const char*, spdlog::sink_ptr> s_sinks;
-  static std::map<const char*, std::shared_ptr<spdlog::logger>> s_loggers;
+  static std::map<std::string, spdlog::sink_ptr> s_sinks;
+  static std::map<std::string, std::shared_ptr<spdlog::logger>> s_loggers;
 };
 } // namespace Pale::Core
