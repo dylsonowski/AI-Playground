@@ -13,3 +13,4 @@
 #include <map>
 
 //--- Internal project includes ---//
+#include "Core/Logging-System/Log-Macros.h"

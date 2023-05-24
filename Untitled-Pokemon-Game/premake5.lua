@@ -18,7 +18,7 @@ project("Untitled-Pokemon-Game")
 
     includedirs({
         rootDir .. "Pale-Engine/src",
-        rootDir .. "Pale-Engine/vendor/Spdlog"
+        rootDir .. "Pale-Engine/vendor/Spdlog/include"
     })
 
     links({"Pale-Engine"})

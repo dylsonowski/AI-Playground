@@ -10,7 +10,7 @@ AlignConsecutiveMacros:
   AcrossEmptyLines: true
   AcrossComments: true
 AlignConsecutiveAssignments: 
-  Enabled: true
+  Enabled: false
   AcrossEmptyLines: true
   AcrossComments: true
   AlignCompound: true
