@@ -1,18 +1,16 @@
 #pragma once
 
 namespace Pale {
-    class Application {
+class Application {
+public:
+	Application() = default;
+	virtual ~Application() = default;
 
-    public:
-        Application() = default;
-        virtual ~Application() = default;
+	void Run();
 
-        void Run();
+private:
+};
 
-    private:
-
-    };
-
-    // To be defined by client
-    Application* CreateApplication();
-}
+// To be defined by client
+Application *CreateApplication();
+} // namespace Pale

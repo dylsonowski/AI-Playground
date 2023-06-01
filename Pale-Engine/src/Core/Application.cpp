@@ -2,8 +2,9 @@
 #include "Application.h"
 
 namespace Pale {
-    void Application::Run() {
-        std::cout << "Pale application run successfully!\n";
-        while(true);
-    }
-}
+	void Application::Run() {
+		if (LOG_SYSTEM_INIT(Core::LOGGING_METHOD::FILE_AND_TERMINAL) == true) {
+			while (true) {}
+		}
+	}
+} // namespace Pale
