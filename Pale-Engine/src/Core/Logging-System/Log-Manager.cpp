@@ -62,7 +62,7 @@ namespace Pale::Core {
 			s_sinksList.push_back(s_terminalSink);
 
 			// File sink configuration
-			std::string logFileName = "logs/AppRuntime(" + std::format("{:%d-%m-%Y %H:%M:%OS}", std::chrono::system_clock::now()) + ").log";
+			std::string logFileName = "logs/runtime/AppRuntime(" + std::format("{:%d-%m-%Y %Hh_%Mm_%OSs}", std::chrono::system_clock::now()) + ").log";
 			s_fileSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(logFileName, true);
 			s_fileSink->set_pattern(logMessagePatternV1);
 			s_fileSink->set_level(spdlog::level::trace);

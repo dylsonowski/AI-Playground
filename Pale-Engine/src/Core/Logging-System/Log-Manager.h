@@ -17,7 +17,10 @@ namespace Pale::Core {
 		~Log_Manager() = default;
 
 		static bool Initialize(LOGGING_METHOD loggingMethod);
-		void Shutdown() {spdlog::shutdown();}
+
+		void Shutdown() {
+			spdlog::shutdown();
+		}
 
 	private:
 		// Sinks
