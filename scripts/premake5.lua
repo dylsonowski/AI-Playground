@@ -1,6 +1,6 @@
 local rootDir = "../"
 
-workspace("Untilted-Pokemon-Game") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
+workspace("Environment-Simulation") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
     architecture("x64")
     configurations({ "Debug", "Release" })
 
@@ -9,7 +9,7 @@ workspace("Untilted-Pokemon-Game") -- Title of the whole project is temporary. I
     })
 
     filter({ "system:windows", "action:vs*" })
-        startproject("Untilted-Pokemon-Game") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
+        startproject("Environment-Simulation") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
         location(rootDir)
         flags({ "MultiProcessorCompile", "NoMinimalRebuild" })
 
@@ -36,7 +36,7 @@ workspace("Untilted-Pokemon-Game") -- Title of the whole project is temporary. I
         optimize("on")
 
 include(rootDir .. "Pale-Engine")
-include(rootDir .. "Untitled-Pokemon-Game")
+include(rootDir .. "Environment-Simulation")
 
 newaction {
     trigger = "clean",

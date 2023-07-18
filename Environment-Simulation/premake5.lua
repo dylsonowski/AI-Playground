@@ -1,7 +1,7 @@
 local rootDir = "../"
 
-project("Untitled-Pokemon-Game")
-    location(rootDir .. "Untitled-Pokemon-Game")
+project("Environment-Simulation")
+    location(rootDir .. "Environment-Simulation")
     kind("ConsoleApp")
     language("C++")
     cppdialect("C++20")

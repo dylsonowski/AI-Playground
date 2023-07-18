@@ -3,10 +3,10 @@
     "configurations": [        
         //--- Debuging configuration for Windows usage ---//
         {
-            "name": "Debug Application: Untitled-Pokemon-Game(Windows)",
+            "name": "Debug Application: Environment-Simulation(Windows)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Untitled-Pokemon-Game_x86_64/Debug/Untitled-Pokemon-Game.exe",
+            "program": "${workspaceFolder}/bin/Environment-Simulation_x86_64/Debug/Environment-Simulation.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -15,10 +15,10 @@
         },
         //--- Debuging configuration for Unix/MacOS usage ---//
         {
-            "name": "Debug Application: Untitled-Pokemon-Game(Unix/MacOS)",
+            "name": "Debug Application: Environment-Simulation(Unix/MacOS)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Untitled-Pokemon-Game_x86_64/Debug/Untitled-Pokemon-Game",
+            "program": "${workspaceFolder}/bin/Environment-Simulation_x86_64/Debug/Environment-Simulation",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
