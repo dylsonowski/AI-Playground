@@ -4,9 +4,9 @@ workspace("Environment-Simulation") -- Title of the whole project is temporary. 
     architecture("x64")
     configurations({ "Debug", "Release" })
 
-    prebuildcommands({
-        "git submodule update --init --recursive"
-    })
+    -- prebuildcommands({ Moved to task configuration
+    --     "git submodule update --init --recursive"
+    -- })
 
     filter({ "system:windows", "action:vs*" })
         startproject("Environment-Simulation") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!

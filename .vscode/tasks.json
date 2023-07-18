@@ -1,6 +1,14 @@
 {
     "version": "2.0.0",
     "tasks": [
+        //--- General usages tasks ---//
+        {
+            "type": "shell",
+            "label": "Initialise & update submodules for project",
+            "command": "git submodule update --init --recursive",
+            "args": [],
+            "group": "build"
+        },
         //--- Tasks configurations for Windows usage ---//
         {
             "type": "process",
