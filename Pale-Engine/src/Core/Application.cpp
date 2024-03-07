@@ -1,5 +1,5 @@
 #include "palepch.h"
-#include "Application.h"
+#include "Application.hpp"
 
 namespace Pale {
 	void Application::Run() {

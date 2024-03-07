@@ -7,7 +7,7 @@
             "label": "C/C++ MSVC: Build Project(Debug-x64-Windows)",
             "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
             "args": [
-                "${workspaceFolder}/Environment-Simulation.sln",
+                "${workspaceFolder}/AI-Playground.sln",
                 "/p:Configuration=Debug;Platform=x64",
                 "/fl",
                 "/flp:LogFile=${workspaceFolder}/logs/build/msbuild.log"
@@ -23,7 +23,7 @@
             "label": "C/C++ MSVC: Build Project(Release-x64-Windows)",
             "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
             "args": [
-                "${workspaceFolder}/Environment-Simulation.sln",
+                "${workspaceFolder}/AI-Playground.sln",
                 "/p:Configuration=Release;Platform=x64",
                 "/fl",
                 "/flp:LogFile=${workspaceFolder}/logs/build/msbuild.log"
@@ -33,8 +33,8 @@
         },
         {
             "type": "shell",
-            "label": "Run Release: Environment-Simulation(Windows)",
-            "command": "${workspaceFolder}/bin/Environment-Simulation_x86_64/Release/Environment-Simulation.exe",
+            "label": "Run Release: AI-Playground(Windows)",
+            "command": "${workspaceFolder}/bin/AI-Playground_x86_64/Release/AI-Playground.exe",
             "args": [],
             "dependsOn": ["C/C++ MSVC: Build Project(Release-x64-Windows)"],
             "problemMatcher": "$msCompile"
@@ -70,8 +70,8 @@
         },
         {
             "type": "shell",
-            "label": "Run Release: Environment-Simulation(Unix/MacOS)",
-            "command": "${workspaceFolder}/bin/Environment-Simulation_x86_64/Release/Environment-Simulation",
+            "label": "Run Release: AI-Playground(Unix/MacOS)",
+            "command": "${workspaceFolder}/bin/AI-Playground_x86_64/Release/AI-Playground",
             "args": [],
             "dependsOn": ["C/C++ MAKE: Build Project(Release-x64-Unix/MacOS)"],
             "problemMatcher": "$msCompile"

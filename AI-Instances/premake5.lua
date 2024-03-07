@@ -1,8 +1,8 @@
 local rootDir = "../"
 
-project("Environment-Simulation")
-    location(rootDir .. "Environment-Simulation")
-    kind("ConsoleApp")
+project("AI-Instances")
+    location(rootDir .. "AI-Instances")
+    kind("StaticLib")
     language("C++")
     cppdialect("C++20")
     staticruntime("on")
@@ -11,17 +11,20 @@ project("Environment-Simulation")
     targetdir(rootDir .. "bin/%{prj.name}_%{cfg.architecture}/%{cfg.buildcfg}")
     objdir(rootDir .. "bin-int/%{prj.name}_%{cfg.architecture}/%{cfg.buildcfg}")
 
+    pchheader("palepch.h")
+    pchsource(rootDir .. "%{prj.name}/src/palepch.cpp")
+
     files({
         rootDir .. "%{prj.name}/src/**.h",
         rootDir .. "%{prj.name}/src/**.cpp"
     })
 
     includedirs({
-        rootDir .. "Pale-Engine/src",
-        rootDir .. "Pale-Engine/vendor/Spdlog/include"
+        rootDir .. "%{prj.name}/src",
+        rootDir .. "%{prj.name}/vendor/Spdlog/include"
     })
 
-    links({"Pale-Engine"})
+    links({ "Pale-Engine" })
 
     filter("files:**.tpp")
         flags({ "ExcludeFromBuild" })

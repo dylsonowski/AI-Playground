@@ -1,5 +1,5 @@
 #pragma once
-#include "Log-Manager.h"
+#include "Log-Manager.hpp"
 
 #ifndef _RELEASE_
 	#define LOG_SYSTEM_INIT(...) Pale::Core::Log_Manager::Initialize(__VA_ARGS__)

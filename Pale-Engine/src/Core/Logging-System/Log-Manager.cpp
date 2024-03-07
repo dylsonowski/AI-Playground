@@ -1,5 +1,5 @@
 #include "palepch.h"
-#include "Log-Manager.h"
+#include "Log-Manager.hpp"
 
 namespace Pale::Core {
 	const std::string logMessagePatternV1 = "%^[%l] [%T.%e] %n: %v%$";

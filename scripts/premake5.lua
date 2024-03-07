@@ -1,6 +1,6 @@
 local rootDir = "../"
 
-workspace("Environment-Simulation") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
+workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
     architecture("x64")
     configurations({ "Debug", "Release" })
 
@@ -9,7 +9,7 @@ workspace("Environment-Simulation") -- Title of the whole project is temporary. 
     })
 
     filter({ "system:windows", "action:vs*" })
-        startproject("Environment-Simulation") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
+        startproject("Playground") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
         location(rootDir)
         flags({ "MultiProcessorCompile", "NoMinimalRebuild" })
 
@@ -36,7 +36,8 @@ workspace("Environment-Simulation") -- Title of the whole project is temporary. 
         optimize("on")
 
 include(rootDir .. "Pale-Engine")
-include(rootDir .. "Environment-Simulation")
+include(rootDir .. "Playground")
+include(rootDir .. "AI-Instances")
 
 newaction {
     trigger = "clean",
