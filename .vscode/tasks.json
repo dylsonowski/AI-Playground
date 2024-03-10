@@ -34,7 +34,7 @@
         {
             "type": "shell",
             "label": "Run Release: AI-Playground(Windows)",
-            "command": "${workspaceFolder}/bin/AI-Playground_x86_64/Release/AI-Playground.exe",
+            "command": "${workspaceFolder}/bin/Playground_x86_64/Release/Playground.exe",
             "args": [],
             "dependsOn": ["C/C++ MSVC: Build Project(Release-x64-Windows)"],
             "problemMatcher": "$msCompile"
@@ -71,7 +71,7 @@
         {
             "type": "shell",
             "label": "Run Release: AI-Playground(Unix/MacOS)",
-            "command": "${workspaceFolder}/bin/AI-Playground_x86_64/Release/AI-Playground",
+            "command": "${workspaceFolder}/bin/Playground_x86_64/Release/Playground",
             "args": [],
             "dependsOn": ["C/C++ MAKE: Build Project(Release-x64-Unix/MacOS)"],
             "problemMatcher": "$msCompile"

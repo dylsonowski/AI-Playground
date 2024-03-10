@@ -1,0 +1,27 @@
+[
+    {
+        "directory": "D:/Visual Studio/AI-Playground/Pale-Engine",
+        "file": "D:/Visual Studio/AI-Playground/Pale-Engine/src/Core/Application.cpp",
+        "command": "cc -MMD -MP -DPLATFORM_WINDOWS -D_DEBUG_ -I\"D:/Visual Studio/AI-Playground/Pale-Engine/src\" -I\"D:/Visual Studio/AI-Playground/Pale-Engine/vendor/Spdlog/include\" -m64 -g -o D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/Application.o -MF D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/Application.d -c D:/Visual Studio/AI-Playground/Pale-Engine/src/Core/Application.cpp"
+    },
+    {
+        "directory": "D:/Visual Studio/AI-Playground/Pale-Engine",
+        "file": "D:/Visual Studio/AI-Playground/Pale-Engine/src/Core/Logging-System/Log-Manager.cpp",
+        "command": "cc -MMD -MP -DPLATFORM_WINDOWS -D_DEBUG_ -I\"D:/Visual Studio/AI-Playground/Pale-Engine/src\" -I\"D:/Visual Studio/AI-Playground/Pale-Engine/vendor/Spdlog/include\" -m64 -g -o D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/Log-Manager.o -MF D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/Log-Manager.d -c D:/Visual Studio/AI-Playground/Pale-Engine/src/Core/Logging-System/Log-Manager.cpp"
+    },
+    {
+        "directory": "D:/Visual Studio/AI-Playground/Pale-Engine",
+        "file": "D:/Visual Studio/AI-Playground/Pale-Engine/src/Core/Math/Matrix.cpp",
+        "command": "cc -MMD -MP -DPLATFORM_WINDOWS -D_DEBUG_ -I\"D:/Visual Studio/AI-Playground/Pale-Engine/src\" -I\"D:/Visual Studio/AI-Playground/Pale-Engine/vendor/Spdlog/include\" -m64 -g -o D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/Matrix.o -MF D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/Matrix.d -c D:/Visual Studio/AI-Playground/Pale-Engine/src/Core/Math/Matrix.cpp"
+    },
+    {
+        "directory": "D:/Visual Studio/AI-Playground/Pale-Engine",
+        "file": "D:/Visual Studio/AI-Playground/Pale-Engine/src/palepch.cpp",
+        "command": "cc -MMD -MP -DPLATFORM_WINDOWS -D_DEBUG_ -I\"D:/Visual Studio/AI-Playground/Pale-Engine/src\" -I\"D:/Visual Studio/AI-Playground/Pale-Engine/vendor/Spdlog/include\" -m64 -g -o D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/palepch.o -MF D:/Visual Studio/AI-Playground/bin-int/Pale-Engine_x86_64/Debug/palepch.d -c D:/Visual Studio/AI-Playground/Pale-Engine/src/palepch.cpp"
+    },
+    {
+        "directory": "D:/Visual Studio/AI-Playground/Playground",
+        "file": "D:/Visual Studio/AI-Playground/Playground/src/Playround.cpp",
+        "command": "cc -MMD -MP -DPLATFORM_WINDOWS -D_DEBUG_ -I\"D:/Visual Studio/AI-Playground/Pale-Engine/src\" -I\"D:/Visual Studio/AI-Playground/Pale-Engine/vendor/Spdlog/include\" -m64 -g -o D:/Visual Studio/AI-Playground/bin-int/Playground_x86_64/Debug/Playround.o -MF D:/Visual Studio/AI-Playground/bin-int/Playground_x86_64/Debug/Playround.d -c D:/Visual Studio/AI-Playground/Playground/src/Playround.cpp"
+    }
+]

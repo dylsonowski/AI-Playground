@@ -1,20 +1,19 @@
+require "export-compile-commands"
 local rootDir = "../"
 
 workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
     architecture("x64")
     configurations({ "Debug", "Release" })
+    location(rootDir .. "bin")
 
     prebuildcommands({
         "git submodule update --init --recursive"
     })
 
-    filter({ "system:windows", "action:vs*" })
+    filter("action:vs*")
         startproject("Playground") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
         location(rootDir)
         flags({ "MultiProcessorCompile", "NoMinimalRebuild" })
-
-    filter("system:linux or system:macosx")
-        location(rootDir .. "bin")
 
     filter("system:windows")
         defines({ "PLATFORM_WINDOWS" })

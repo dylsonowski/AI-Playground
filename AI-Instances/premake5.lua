@@ -11,7 +11,7 @@ project("AI-Instances")
     targetdir(rootDir .. "bin/%{prj.name}_%{cfg.architecture}/%{cfg.buildcfg}")
     objdir(rootDir .. "bin-int/%{prj.name}_%{cfg.architecture}/%{cfg.buildcfg}")
 
-    pchheader("palepch.h")
+    pchheader("palepch.hpp")
     pchsource(rootDir .. "%{prj.name}/src/palepch.cpp")
 
     files({
