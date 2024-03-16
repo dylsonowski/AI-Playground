@@ -1,5 +1,5 @@
 -- require "export-compile-commands"
-require "ecc"
+require "ecc/ecc"
 local rootDir = "../"
 
 workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
