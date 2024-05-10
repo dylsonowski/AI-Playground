@@ -5,7 +5,6 @@
 #include <memory>
 #include <chrono>
 #include <cstdint>
-#include <format>
 
 //--- Data structures includes ---//
 #include <vector>

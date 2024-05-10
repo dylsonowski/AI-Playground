@@ -1,8 +1,7 @@
 #include "palepch.hpp"
 #include "Log-Manager.hpp"
 
-namespace Pale {
-namespace Core {
+namespace Pale::Core {
 const std::string logMessagePatternV1 = "%^[%l] [%T.%e] %n: %v%$";
 const std::string logMessagePatternV2 = "%^[%c][%n][%l] %v%$: %@ -> %!";  // IMPORTANT: use SPDLOG_TRACE(..), SPDLOG_INFO(...) etc.
                                                                           // instead of spdlog::trace(...) in 'Log-Macros.h'
@@ -32,12 +31,11 @@ bool Log_Manager::Initialize(LOGGING_METHOD loggingMethod) {
             s_clientLogger->set_level(spdlog::level::trace);
             s_clientLogger->flush_on(spdlog::level::trace);
             spdlog::register_logger(s_clientLogger);
-            break;
         }
         case LOGGING_METHOD::FILE_ONLY: {
             // File sink configuration
             std::string logFileName =
-                "logs/AppRuntime(" + std::format("{:%d-%m-%Y %H:%M:%OS}", std::chrono::system_clock::now()) + ").log";
+                "logs/AppRuntime(1).log";
             s_fileSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(logFileName, true);
             s_fileSink->set_pattern(logMessagePatternV1);
             s_fileSink->set_level(spdlog::level::trace);
@@ -53,7 +51,6 @@ bool Log_Manager::Initialize(LOGGING_METHOD loggingMethod) {
             s_clientLogger->set_level(spdlog::level::trace);
             s_clientLogger->flush_on(spdlog::level::trace);
             spdlog::register_logger(s_clientLogger);
-            break;
         }
         case LOGGING_METHOD::FILE_AND_TERMINAL: {
             static std::vector<spdlog::sink_ptr> s_sinksList;
@@ -66,7 +63,7 @@ bool Log_Manager::Initialize(LOGGING_METHOD loggingMethod) {
 
             // File sink configuration
             std::string logFileName =
-                "logs/runtime/AppRuntime(" + std::format("{:%d-%m-%Y %Hh_%Mm_%OSs}", std::chrono::system_clock::now()) + ").log";
+                "logs/runtime/AppRuntime(1).log";
             s_fileSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(logFileName, true);
             s_fileSink->set_pattern(logMessagePatternV1);
             s_fileSink->set_level(spdlog::level::trace);
@@ -83,15 +80,12 @@ bool Log_Manager::Initialize(LOGGING_METHOD loggingMethod) {
             s_clientLogger->set_level(spdlog::level::trace);
             s_clientLogger->flush_on(spdlog::level::trace);
             spdlog::register_logger(s_clientLogger);
-            break;
         }
         default: {
             return false;
-            break;
         }
     }
 
     return true;
 }
-}  // namespace Core
-}  // namespace Pale
+}  // namespace Pale::Core

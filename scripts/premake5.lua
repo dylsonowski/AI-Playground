@@ -1,5 +1,4 @@
--- require "export-compile-commands"
-require "ecc/ecc"
+require "premake-ecc/ecc"
 local rootDir = "../"
 
 workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL CHANGE IN THE FUTURE!!!!
@@ -10,6 +9,8 @@ workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL C
     prebuildcommands({
         "git submodule update --init --recursive"
     })
+
+    defines({ "_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING" })
 
     filter("action:vs*")
         startproject("Playground") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!

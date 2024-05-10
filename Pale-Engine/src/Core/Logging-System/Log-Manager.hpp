@@ -4,7 +4,6 @@
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include "spdlog/sinks/basic_file_sink.h"
 
-
 namespace Pale::Core {
 enum class LOGGING_METHOD { FILE_AND_TERMINAL = 0, FILE_ONLY, TERMINAL_ONLY };
 
@@ -28,5 +27,4 @@ private:
     static std::shared_ptr<spdlog::logger> s_engineLogger;
     static std::shared_ptr<spdlog::logger> s_clientLogger;
 };
-} // namespace Pale::Core
-
+}  // namespace Pale::Core
