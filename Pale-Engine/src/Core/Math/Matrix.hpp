@@ -1,6 +1,6 @@
 #pragma once
 namespace Pale::Core::Math {
-	template<typename T = int>
+	template<typename T>
 	class Matrix {
 	public:
 		// Constructors

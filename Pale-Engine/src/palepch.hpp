@@ -11,4 +11,4 @@
 
 //--- Internal project includes ---//
 #include "Core/Logging-System/Log-Macros.hpp"
-#include "Core/Expect.hpp"
+#include "Core/Logging-System/Log-Manager.hpp"
