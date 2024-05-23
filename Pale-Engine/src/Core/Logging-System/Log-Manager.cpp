@@ -2,7 +2,8 @@
 #include "Log-Manager.hpp"
 
 namespace Pale::Core {
-const std::string logMessagePatternV1 = "%^[%l] [%T.%e] %n: %v%$";
+// [<COLOR_START><LEVEL><COLOR_END>] [<HH:MM:SS>.<MILLISECOND>] <LOGGER_NAME>: <MESSAGE>
+const std::string logMessagePatternV1 = "[%^%l%$] [%T.%e] %n: %v"; 
 const std::string logMessagePatternV2 = "%^[%c][%n][%l] %v%$: %@ -> %!";  // IMPORTANT: use SPDLOG_TRACE(..), SPDLOG_INFO(...) etc.
                                                                           // instead of spdlog::trace(...) in 'Log-Macros.h'
 

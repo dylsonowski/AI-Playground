@@ -3,6 +3,34 @@
     "tasks": [
         //--- Tasks configurations for Windows usage ---//
         {
+            "type": "shell",
+            "label": "C/C++ MinGW: Build Project(Debug-x64-Windows)",
+            "command": "mingw32-make",
+            "args": [
+                "--directory=${workspaceFolder}/bin",
+                "config=debug"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal":"always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++ MinGW: Build Project(Release-x64-Windows)",
+            "command": "mingw32-make",
+            "args": [
+                "--directory=${workspaceFolder}/bin",
+                "config=release"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal":"always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
             "type": "process",
             "label": "C/C++ MSVC: Build Project(Debug-x64-Windows)",
             "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/Msbuild/Current/Bin/msbuild.exe",
@@ -33,10 +61,18 @@
         },
         {
             "type": "shell",
-            "label": "Run Release: AI-Playground(Windows)",
+            "label": "Run Release: AI-Playground(Windows-MSVC)",
             "command": "${workspaceFolder}/bin/Playground_x86_64/Release/Playground.exe",
             "args": [],
             "dependsOn": ["C/C++ MSVC: Build Project(Release-x64-Windows)"],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "shell",
+            "label": "Run Release: AI-Playground(Windows-MinGW)",
+            "command": "${workspaceFolder}/bin/Playground_x86_64/Release/Playground.exe",
+            "args": [],
+            "dependsOn": ["C/C++ MinGW: Build Project(Release-x64-Windows)"],
             "problemMatcher": "$msCompile"
         },
         //--- Tasks configurations for Unix/MacOS usage ---//

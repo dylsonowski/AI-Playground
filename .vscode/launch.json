@@ -3,10 +3,21 @@
     "configurations": [        
         //--- Debuging configuration for Windows usage ---//
         {
-            "name": "Debug Application: Environment-Simulation(Windows)",
+            "name": "Debug Application: AI-Playground(Windows-MinGW)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Environment-Simulation_x86_64/Debug/Environment-Simulation.exe",
+            "program": "${workspaceFolder}/bin/Playground_x86_64/Debug/Playground.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "preLaunchTask": "C/C++ MinGW: Build Project(Debug-x64-Windows)"
+        },
+        {
+            "name": "Debug Application: AI-Playground(Windows-MSVC)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Playground_x86_64/Debug/Playground.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -15,10 +26,10 @@
         },
         //--- Debuging configuration for Unix/MacOS usage ---//
         {
-            "name": "Debug Application: Environment-Simulation(Unix/MacOS)",
+            "name": "Debug Application: AI-Playground(Unix/MacOS)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Environment-Simulation_x86_64/Debug/Environment-Simulation",
+            "program": "${workspaceFolder}/bin/Playground_x86_64/Debug/Playground",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
