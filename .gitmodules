@@ -1,3 +1,6 @@
 [submodule "Pale-Engine/vendor/Spdlog"]
 	path = Pale-Engine/vendor/Spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "scripts/premake-ecc"]
+	path = scripts/premake-ecc
+	url = https://github.com/MattBystrin/premake-ecc.git
