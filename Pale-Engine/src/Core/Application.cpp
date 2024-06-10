@@ -4,11 +4,13 @@
 namespace Pale {
 void Application::Run() {
 #ifndef _RELEASE_
-    if (LOG_SYSTEM_INIT(Core::LOGGING_METHOD::FILE_AND_TERMINAL) != true) {
-        return;
-    }
+	if (LOG_SYSTEM_INIT(Core::LOGGING_METHOD::FILE_AND_TERMINAL) == false) {
+		return;
+	}
 #endif
-    while (true) {
-    }
+	std::cout << std::chrono::system_clock::now() << std::endl;
+	while (true) {
+		if (std::cin.get()) break;
+	}
 }
 }  // namespace Pale

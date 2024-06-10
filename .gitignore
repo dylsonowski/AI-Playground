@@ -12,3 +12,4 @@ logs/
 *.vcxproj
 *.filters
 Makefile
+compile_commands.json

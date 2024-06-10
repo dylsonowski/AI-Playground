@@ -4,13 +4,13 @@
         //--- Debuging configuration for Windows usage ---//
         {
             "name": "Debug Application: AI-Playground(Windows-MinGW)",
-            "type": "cppvsdbg",
+            "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/Playground_x86_64/Debug/Playground.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "console": "externalTerminal",
+            "externalConsole": true,
             "preLaunchTask": "C/C++ MinGW: Build Project(Debug-x64-Windows)"
         },
         {

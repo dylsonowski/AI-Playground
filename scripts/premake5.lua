@@ -6,9 +6,9 @@ workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL C
     configurations({ "Debug", "Release" })
     location(rootDir .. "bin")
 
-    prebuildcommands({
-        "git submodule update --init --recursive"
-    })
+    -- prebuildcommands({
+    --     "git submodule update --init --recursive"
+    -- })
 
     defines({ "_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING" })
 
@@ -16,6 +16,9 @@ workspace("AI-Playground") -- Title of the whole project is temporary. IT WILL C
         startproject("Playground") -- When real project structure will be configure, change it to game project. !IMPORTANT: Only for Visual Studio building!
         location(rootDir)
         flags({ "MultiProcessorCompile", "NoMinimalRebuild" })
+
+    -- filter("action:gmake2")
+    --     buildoptions({ "-g" })
 
     filter("system:windows")
         defines({ "PLATFORM_WINDOWS" })
@@ -56,6 +59,8 @@ newaction {
         os.remove("../**.vcxproj.user")
         os.remove("../**Makefile")
         os.remove("../**.make")
+        print("Removing compile_commands file")
+        os.remove("../compile_commands.json")
         print("Done!")
     end
 }

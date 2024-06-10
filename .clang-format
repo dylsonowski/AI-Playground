@@ -7,14 +7,14 @@ Standard: Cpp11
 ColumnLimit: 135
 SortIncludes: false
 
-AccessModifierOffset: -4
-IndentWidth: 4
-UseTab: Never
+AccessModifierOffset: -8
+IndentWidth: 8
+UseTab: Always
 
 AlignEscapedNewlines: Left
-AllowShortFunctionsOnASingleLine: Empty
-AllowShortLambdasOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: All
+AllowShortLambdasOnASingleLine: All
 AlwaysBreakTemplateDeclarations: true
-BreakConstructorInitializers: BeforeComma
+BreakConstructorInitializers: AfterColon
 IndentPPDirectives: AfterHash
 PointerAlignment: Left

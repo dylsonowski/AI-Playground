@@ -1,6 +1,6 @@
 #include <Pale.hpp>
 
-class Playground: public Pale::Application {
+class Playground : public Pale::Application {
 public:
 	Playground() = default;
 	~Playground() = default;
@@ -8,6 +8,4 @@ public:
 private:
 };
 
-Pale::Application *Pale::CreateApplication() {
-	return new Playground();
-}
+Pale::Application *Pale::CreateApplication() { return new Playground(); }

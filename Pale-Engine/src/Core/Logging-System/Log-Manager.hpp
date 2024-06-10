@@ -9,22 +9,25 @@ enum class LOGGING_METHOD { FILE_AND_TERMINAL = 0, FILE_ONLY, TERMINAL_ONLY };
 
 class Log_Manager {
 public:
-    Log_Manager() = default;
-    ~Log_Manager() = default;
+	Log_Manager(Log_Manager& other) = delete;
+	~Log_Manager() = default;
 
-    static bool Initialize(LOGGING_METHOD loggingMethod);
+	void operator=(Log_Manager& other) = delete;
 
-    void Shutdown() {
-        spdlog::shutdown();
-    }
+	static bool Initialize(LOGGING_METHOD loggingMethod);
+
+	void Shutdown() { spdlog::shutdown(); }
 
 private:
-    // Sinks
-    static std::shared_ptr<spdlog::sinks::stdout_color_sink_mt> s_terminalSink;
-    static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> s_fileSink;
+	Log_Manager() = default;
 
-    // Loggers
-    static std::shared_ptr<spdlog::logger> s_engineLogger;
-    static std::shared_ptr<spdlog::logger> s_clientLogger;
+	// Sinks
+	static std::shared_ptr<spdlog::sinks::stdout_color_sink_mt> s_terminalSink;
+	static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> s_fileSink;
+
+	// Loggers
+	static std::shared_ptr<spdlog::logger> s_engineLogger;
+	static std::shared_ptr<spdlog::logger> s_clientLogger;
+	static std::shared_ptr<spdlog::logger> s_assertionLogger;
 };
 }  // namespace Pale::Core
